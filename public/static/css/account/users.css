@@ -1,0 +1,218 @@
+/* User management */
+.products-card,
+.form-card {
+    background: var(--theme-surface);
+    color: var(--theme-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--theme-shadow);
+    border: 1px solid var(--theme-border);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* User Info in Table */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: 600;
+    color: var(--theme-text);
+}
+
+.product-sku {
+    font-size: 0.85rem;
+    color: var(--theme-text-muted);
+}
+
+/* Form Layouts */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--theme-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid var(--theme-border);
+    border-radius: 6px;
+    background: var(--theme-surface-muted);
+    color: var(--theme-text);
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--amazon-orange, #febd69);
+    box-shadow: 0 0 0 3px rgba(254, 189, 105, 0.2);
+}
+
+/* Buttons and Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--theme-border);
+}
+
+.amazon-btn {
+    background: #f3c843;
+    border: 1px solid #cca637;
+    color: #161616;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.amazon-btn:hover {
+    background: #e8bb35;
+}
+
+.btn-cancel {
+    background: var(--theme-surface-muted);
+    border: 1px solid var(--theme-border);
+    color: var(--theme-text);
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background: var(--theme-surface);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-edit {
+    background-color: #f6d67a;
+    color: #232323;
+    border: 1px solid #d6b85f;
+}
+
+.btn-edit:hover {
+    background-color: #edca66;
+}
+
+.btn-delete {
+    background-color: #d25656;
+    color: white;
+    border: 1px solid #b03e3e;
+}
+
+.btn-delete:hover {
+    background-color: #c54848;
+}
+
+/* Badge Styles */
+.role-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Light Theme Badge Colors */
+.role-admin { background-color: #fde8e8; color: #c81e1e; }
+.role-manager { background-color: #e1effe; color: #1e429f; }
+.role-customer { background-color: #f3f4f6; color: #374151; }
+.role-driver { background-color: #fef3c7; color: #92400e; }
+.role-warehouse_worker { background-color: #def7ec; color: #03543f; }
+
+.status-active { background-color: #def7ec; color: #03543f; }
+.status-out { background-color: #fde8e8; color: #c81e1e; }
+
+/* Dark Theme Badge Colors */
+[data-theme="dark"] .role-admin { background-color: #771d1d; color: #f9b4b4; }
+[data-theme="dark"] .role-manager { background-color: #1e3a8a; color: #bfdbfe; }
+[data-theme="dark"] .role-customer { background-color: #374151; color: #d1d5db; }
+[data-theme="dark"] .role-driver { background-color: #78350f; color: #fde68a; }
+[data-theme="dark"] .role-warehouse_worker { background-color: #064e3b; color: #a7f3d0; }
+
+[data-theme="dark"] .status-active { background-color: #064e3b; color: #a7f3d0; }
+[data-theme="dark"] .status-out { background-color: #771d1d; color: #f9b4b4; }
+
+[data-theme="dark"] .btn-cancel {
+    background: var(--theme-surface-muted);
+    color: var(--theme-text);
+    border-color: var(--theme-border);
+}
+[data-theme="dark"] .btn-cancel:hover {
+    background: var(--theme-surface);
+}
+
+@media (max-width: 768px) {
+    .products-card,
+    .form-card {
+        padding: 14px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+}

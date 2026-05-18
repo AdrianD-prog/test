@@ -1,0 +1,73 @@
+/* Styl Amazon */
+.form-control:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #f7ca00 !important;
+    border-color: #f2c200 !important;
+}
+
+a:hover {
+    color: #c45500 !important;
+    text-decoration: underline !important;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+/* Styl breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* Styl ikon */
+i {
+    margin-right: 4px;
+}
+
+/* Alerty z ikonami */
+.alert i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Dodatkowe odstępy dla pól adresu */
+.row.g-2 > [class*="col-"] {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.row.g-2 {
+    margin-right: -4px;
+    margin-left: -4px;
+}
+
+/* Styl dla przycisku podglądu hasła */
+#togglePasswordBtn:hover span {
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+#togglePasswordBtn span {
+    transition: transform 0.2s ease;
+    font-size: 1.2rem;
+}

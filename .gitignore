@@ -1,0 +1,7 @@
+**/vendor/
+**/.env
+**/.idea/
+**/.venv/
+**/__pycache__/
+/python_api/endpoints/__pycache__/
+qodana.yaml

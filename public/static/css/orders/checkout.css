@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #c45500;
+    --bg-amazonix-checkout: var(--theme-body-bg, #eaeded);
+    --text-color: var(--theme-text, #111);
+    --muted-color: var(--theme-text-muted, #565959);
+    --amazonix-card-bg: var(--theme-surface-muted, #f7f7f7);
+    --dark-primary-color: #202020;
+}
+.amazon-checkout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: none;
+}
+
+
+.checkout-header {
+    background: var(--amazonix-card-bg);
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.checkout-header h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.checkout-steps {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    color: var(--muted-color);
+}
+
+.checkout-steps .step {
+    position: relative;
+    padding-left: 20px;
+}
+
+.checkout-steps .step.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.checkout-steps .step.active::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #c45500;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: var(--theme-surface, white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid var(--theme-border, #ddd);
+}
+
+.amazon-checkout .card,
+.amazon-checkout .card-body,
+.amazon-checkout .delivery-section,
+.amazon-checkout .payment-section,
+.amazon-checkout .order-summary {
+    background: var(--theme-surface, white);
+    color: var(--text-color);
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--theme-border, #ddd);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.address-preview {
+    background: var(--amazonix-card-bg);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.edit-link {
+    color: #0066c0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--theme-border, #a6a6a6);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--theme-border, #a6a6a6);
+    border-radius: 4px;
+    font-size: 14px;
+    background: var(--theme-surface, #fff);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,0.5);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,0.5);
+}
+
+.delivery-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.delivery-option {
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    gap: 12px;
+    align-items: start;
+    padding: 14px;
+    border: 1px solid var(--theme-border, #d5d9d9);
+    border-radius: 8px;
+    background: var(--theme-surface, #fff);
+    cursor: pointer;
+}
+
+.delivery-option:hover {
+    border-color: #e77600;
+}
+
+.delivery-option input {
+    margin-top: 3px;
+}
+
+.delivery-option span {
+    display: block;
+}
+
+.delivery-option small {
+    display: block;
+    margin-top: 3px;
+    color: var(--muted-color);
+}
+
+.payment-method-panel {
+    margin-top: 18px;
+}
+
+.is-invalid {
+    border-color: #c62828 !important;
+}
+
+.invalid-feedback {
+    color: #c62828;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .half {
+    flex: 1;
+}
+
+.security-note {
+    background: var(--amazonix-card-bg);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--muted-color);
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn-place-order {
+    background: #ffd814;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-place-order:hover {
+    background: #f7ca00;
+}
+
+.cart-items {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--theme-border, #eee);
+}
+
+.cart-item .item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: var(--theme-surface, #fff);
+}
+
+.cart-item .item-details {
+    flex: 1;
+}
+
+.item-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.item-quantity {
+    font-size: 12px;
+    color: var(--muted-color);
+}
+
+.item-price {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.totals {
+    border-top: 1px solid var(--theme-border, #ddd);
+    padding-top: 15px;
+}
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.grand-total {
+    font-size: 18px;
+    font-weight: 700;
+    color: #b12704;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--theme-border, #ddd);
+}
+
+.text-muted {
+    color: var(--muted-color);
+}

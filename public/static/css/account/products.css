@@ -1,0 +1,263 @@
+/* Employee panel base */
+.account-container {
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 24px;
+}
+
+.account-sidebar {
+    background: var(--theme-surface);
+    border: 1px solid var(--theme-border);
+    border-radius: 8px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.sidebar-nav li {
+    border: 0;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    color: var(--theme-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color .16s ease, color .16s ease;
+}
+
+.sidebar-nav a:hover {
+    background: var(--theme-surface-muted);
+}
+
+.sidebar-nav li.active a {
+    background: var(--theme-surface-muted);
+    font-weight: 700;
+}
+
+.nav-icon {
+    font-size: 16px;
+}
+
+.account-content {
+    min-width: 0;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.content-header h1,
+.content-header h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--theme-text);
+}
+
+.products-table-container,
+.form-container {
+    background: var(--theme-surface);
+    border: 1px solid var(--theme-border);
+    border-radius: 8px;
+    box-shadow: var(--theme-shadow);
+}
+
+.products-table-container {
+    overflow: auto;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.products-table th,
+.products-table td {
+    border-bottom: 1px solid var(--theme-border);
+    text-align: left;
+    padding: 12px 14px;
+    vertical-align: middle;
+}
+
+.products-table th {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--theme-text-muted);
+    background: var(--theme-surface-muted);
+}
+
+.products-table tbody tr:hover {
+    background: color-mix(in srgb, var(--theme-surface-muted) 65%, transparent);
+}
+
+.product-thumb {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid var(--theme-border);
+    background: #fff;
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.amazon-btn,
+.btn-back,
+.btn-edit,
+.btn-delete {
+    border-radius: 6px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.amazon-btn {
+    background: #f3c843;
+    border-color: #cca637;
+    color: #161616;
+    padding: 10px 14px;
+}
+
+.amazon-btn:hover {
+    background: #e8bb35;
+}
+
+.btn-back {
+    padding: 10px 12px;
+    background: var(--theme-surface-muted);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+}
+
+.btn-edit,
+.btn-delete {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+}
+
+.btn-edit {
+    background: #f6d67a;
+    border-color: #d6b85f;
+    color: #232323;
+    margin-right: 6px;
+}
+
+.btn-edit:hover {
+    background: #edca66;
+}
+
+.btn-delete {
+    background: #d25656;
+    border-color: #b03e3e;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #c54848;
+}
+
+.form-container {
+    max-width: 920px;
+    padding: 24px;
+}
+
+.amazon-form .form-group {
+    margin-bottom: 16px;
+}
+
+.amazon-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--theme-text);
+}
+
+.amazon-form .form-control {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid var(--theme-border);
+    border-radius: 6px;
+    background: var(--theme-surface-muted);
+    color: var(--theme-text);
+    font-size: 14px;
+}
+
+.amazon-form .form-control:focus {
+    outline: none;
+    border-color: #d6a31f;
+    box-shadow: 0 0 0 3px rgba(214, 163, 31, .18);
+}
+
+.amazon-form textarea.form-control {
+    resize: vertical;
+}
+
+.form-actions {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--theme-border);
+}
+
+@media (max-width: 1100px) {
+    .account-container {
+        grid-template-columns: 1fr;
+    }
+
+    .account-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-container {
+        padding: 0 12px;
+        gap: 14px;
+    }
+
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-header h1,
+    .content-header h2 {
+        font-size: 22px;
+    }
+
+    .form-container {
+        padding: 16px;
+    }
+}

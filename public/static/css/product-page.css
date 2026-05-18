@@ -1,0 +1,95 @@
+body { background: #fff; font-family: Arial, sans-serif; font-size: 14px; color: #0F1111; }
+
+/* ── Breadcrumb-like brand ── */
+.brand-link { font-size: 12px; color: #0066c0; text-decoration: none; }
+.brand-link:hover { text-decoration: underline; color: #c45500; }
+
+/* ── Title ── */
+.product-title-main { font-size: 21px; font-weight: 400; line-height: 1.3; }
+
+/* ── Stars ── */
+.stars { color: #e77600; font-size: 14px; }
+.rating-link { font-size: 14px; color: #0066c0; text-decoration: none; }
+.rating-link:hover { text-decoration: underline; color: #c45500; }
+.bought-info { font-size: 14px; color: #0F1111; }
+
+/* ── Price block ── */
+.price-label { font-size: 12px; color: #565959; }
+.price-current { font-size: 28px; font-weight: 400; color: #0F1111; }
+.price-current .currency { font-size: 14px; vertical-align: super; margin-right: 2px; }
+.price-current .cents { font-size: 14px; vertical-align: super; }
+.price-list { font-size: 14px; color: #565959; }
+.price-save { font-size: 14px; color: #c7511f; font-weight: 700; }
+
+/* ── Shipping / stock ── */
+.shipping-free { font-size: 14px; color: #007600; font-weight: 700; }
+.shipping-detail { font-size: 14px; }
+.in-stock { font-size: 15px; color: #007600; font-weight: 700; }
+
+/* ── Thumbnails ── */
+.thumb { width: 58px; height: 58px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; }
+.thumb.active, .thumb:hover { border: 2px solid #e77600; }
+
+/* ── Main image placeholder ── */
+.main-img { width: 100%; height: 380px; background: #f0f0f0; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 13px; }
+
+/* ── Buy box ── */
+.buy-box { border: 1px solid #DDD; border-radius: 8px; padding: 18px 16px; }
+.price-box-top { font-size: 13px; color: #565959; }
+.price-box-big { font-size: 24px; font-weight: 400; }
+.price-box-big .currency { font-size: 13px; vertical-align: super; margin-right: 1px; }
+.price-box-big .cents { font-size: 14px; vertical-align: super; }
+.deliver-free { font-size: 14px; color: #007600; font-weight: 700; }
+.deliver-detail { font-size: 13px; }
+.order-within { font-size: 13px; }
+.deliver-to { font-size: 13px; color: #0066c0; }
+.in-stock-box { font-size: 14px; color: #007600; font-weight: 700; }
+.qty-select { border: 1px solid #888; border-radius: 4px; padding: 4px 8px; font-size: 14px; width: 80px; }
+
+.btn-add {
+    background: #148aff;
+    border: 1px solid #1088ff;
+    border-radius: 20px;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 14px;
+    color: #0F1111;
+    font-weight: 400;
+}
+.btn-add:hover { background: #0c88ff; border-color: #0683ff; }
+
+.btn-fav {
+    background: #8d6fff;
+    border: 1px solid #6f4bff;
+    border-radius: 20px;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 14px;
+    color: #0F1111;
+    font-weight: 400;
+}
+.btn-fav:hover { background: #8463ff; border-color: #6238ff; }
+
+.secure-link { font-size: 12px; color: #0066c0; text-decoration: none; }
+.secure-link:hover { text-decoration: underline; }
+
+/* ── Description ── */
+.section-title { font-size: 18px; font-weight: 700; border-bottom: 1px solid #e7e7e7; padding-bottom: 8px; margin-bottom: 12px; }
+.spec-table td { padding: 8px 0; font-size: 14px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+.spec-table td:first-child { color: #565959; width: 180px; padding-right: 16px; }
+
+/* ── Tabs ── */
+.nav-tabs .nav-link { color: #0066c0; font-size: 14px; border: none; border-bottom: 3px solid transparent; padding: 8px 16px 8px 0; background: none; }
+.nav-tabs .nav-link.active { color: #0F1111; border-bottom: 3px solid #e77600; font-weight: 700; }
+.nav-tabs { border-bottom: 1px solid #ddd; }
+
+table, tr, th, td { border: 1px solid #ddd; border-collapse: collapse; }
+
+/* Override Bootstrap's default styles */
+.nav-link {
+    background: none !important;
+}
+
+p.text-dark {
+    color: var(--theme-text, #0f1111);
+}

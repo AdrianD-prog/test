@@ -1,0 +1,9 @@
+dotenv
+pyjwt
+mysql-connector
+flask
+flask-cors
+apscheduler
+cryptography
+hmac
+hashlib

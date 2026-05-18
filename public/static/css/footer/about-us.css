@@ -1,0 +1,21 @@
+.value-card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .value-card:hover h3 {
+        transform: scale(1.2);
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .value-card:hover h5 {
+        color: #007bff;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }

@@ -1,0 +1,131 @@
+/* Formularz dostaje position: relative, aby dropdown liczyl pozycje wzgledem niego. */
+.search-form {
+    position: relative;
+}
+
+/* To jest glowny kontener dropdownu z sugestiami. */
+.search-suggestions {
+    /* absolute pozwala ustawic panel tuz pod formularzem. */
+    position: absolute;
+    /* Panel zaczyna sie zaraz pod dolna krawedzia formularza. */
+    top: calc(100% + 0.5rem);
+    /* Lewa krawedz panelu jest wyrownana do lewej krawedzi formularza. */
+    left: 0;
+    /* Prawa krawedz panelu jest wyrownana do prawej krawedzi formularza. */
+    right: 0;
+    /* Wysoki z-index trzyma dropdown nad innymi elementami strony. */
+    z-index: 1050;
+    /* Ukrywamy wszystko, co wystawaloby poza zaokraglone rogi. */
+    overflow: hidden;
+    /* Delikatna ramka odcina panel od tla. */
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    /* Zaokraglenie rogow poprawia wyglad dropdownu. */
+    border-radius: 1rem;
+    /* Jasne tlo dla trybu domyslnego. */
+    background: #fff;
+}
+
+/* Te reguly odpowiadaja za wspolny wyglad zwyklych sugestii i linku na koncu. */
+.search-suggestion-item,
+.search-suggestions__results-link {
+    /* Flex ustawia elementy w jednym rzedzie. */
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    /* Padding powieksza klikalny obszar. */
+    padding: 0.85rem 1rem;
+    color: #0f172a;
+    /* Usuwamy standardowe podkreslenie linku. */
+    text-decoration: none;
+    /* Plynne przejscie wygladu przy hoverze. */
+    transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+/* Każda kolejna sugestia dostaje separator od poprzedniej. */
+.search-suggestion-item + .search-suggestion-item {
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* Hover i aktywna sugestia maja taki sam stan wizualny. */
+.search-suggestion-item:hover,
+.search-suggestion-item.is-active,
+.search-suggestions__results-link:hover {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* Obrazek i placeholder maja identyczny rozmiar, by lista sie nie przesuwala. */
+.search-suggestion-item__image,
+.search-suggestion-item__placeholder {
+    width: 3rem;
+    height: 3rem;
+    /* To blokuje zmiane szerokosci przez zawartosc. */
+    flex: 0 0 3rem;
+    border-radius: 0.85rem;
+}
+
+/* Obrazek wypelnia swoj box bez rozciagania proporcji. */
+.search-suggestion-item__image {
+    object-fit: cover;
+    background: #f8fafc;
+}
+
+/* Placeholder pokazujemy, gdy produkt nie ma zdjecia. */
+.search-suggestion-item__placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Kontener na tekst trzyma nazwe i cene jedna pod druga. */
+.search-suggestion-item__content {
+    display: flex;
+    /* min-width: 0 pozwala na poprawne obcinanie tekstu we flexie. */
+    min-width: 0;
+    flex-direction: column;
+}
+
+/* Nazwa produktu ma byc mocniejsza i nie wychodzic poza wiersz. */
+.search-suggestion-item__title {
+    overflow: hidden;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Ten tekst to zwykle cena albo krotka informacja pomocnicza. */
+.search-suggestion-item__meta {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Link na dole prowadzi do pelnej listy wynikow. */
+.search-suggestions__results-link {
+    justify-content: center;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* Ten blok widac wtedy, gdy nie ma zadnych sugestii. */
+.search-suggestions__empty {
+    padding: 1rem;
+    color: #64748b;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    /* Na mniejszych ekranach lekko poszerzamy dropdown dla wygodniejszego tapniecia. */
+    .search-suggestions {
+        left: -0.25rem;
+        right: -0.25rem;
+    }
+
+    /* Delikatnie zmniejszamy padding, by panel nie wygladal zbyt ciezko. */
+    .search-suggestion-item,
+    .search-suggestions__results-link {
+        padding: 0.75rem 0.85rem;
+    }
+}
